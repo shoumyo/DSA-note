@@ -1,0 +1,10 @@
+{
+    "C_Cpp.autocompleteAddParentheses": true,
+    "editor.quickSuggestions": {
+        "comments": "inline",
+        "strings": "inline"
+    },
+    "files.associations": {
+        "vector": "cpp"
+    }
+}
