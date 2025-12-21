@@ -92,6 +92,12 @@ class Boys{
         this->cgpaptr=obj.cgpaptr;
     }
 
+    //destructor
+    ~Boys(){
+        cout<<"I delete everything"<<endl;
+        delete cgpaptr; //memory leak
+    }
+
     void getInfo(){
         cout<<name<<endl;
         cout<<*cgpaptr<<endl;
