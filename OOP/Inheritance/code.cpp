@@ -7,8 +7,9 @@ class Person{
     string name;
     int age;
 
-    Person(){
-
+    Person(string name,int age){
+        this->name=name;
+        this->age=age;
     }
 
 };
@@ -17,6 +18,10 @@ class Student:public Person{
     public:
     int roll;
 
+    Student(string name,int age,int roll):Person(name,age){
+        this->roll=roll;
+    }
+
     void getInfo(){
         cout<<name<<endl;
         cout<<age<<endl;
@@ -24,12 +29,14 @@ class Student:public Person{
     }
 };
 
+class GradStudent :public Student{
+    public:
+    string researchArea;
+};
+
 int main(){
 
-    Student s1;
-    s1.name="shoumyo";
-    s1.age=20;
-    s1.roll=2304132;
+    Student s1("Shoumyo",23,2304132);
 
     s1.getInfo();
 
